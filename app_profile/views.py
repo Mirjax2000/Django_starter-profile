@@ -19,7 +19,7 @@ def user_list(request) -> HttpResponse:
 def user_profile(request, pk) -> HttpResponse | HttpResponseRedirect:
     """user profile page"""
     if models.User.objects.get(id=pk):
-        user_: models.User = models.User.objects.get(id=pk)
+        user_ :User= models.User.objects.get(id=pk)
         context: dict[str, user_] = {"user": user_}
         return render(request=request, template_name="user.html", context=context)
     return redirect("users")

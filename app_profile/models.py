@@ -13,6 +13,8 @@ class User(models.Model):
         unique=True,
         verbose_name="User display name",
     )
+    user_img = models.ImageField(default="avatar_3.png", blank=True)
+    # user_img = models.ImageField(upload_to="users/", default="users/avatar_1.png")
 
     class Meta:
         ordering = ["user_name"]
