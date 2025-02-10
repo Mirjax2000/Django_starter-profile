@@ -29,7 +29,6 @@ INSTALLED_APPS = [
     "app_profile.apps.AppProfileConfig",
     # --- installed apps
     "django_dump_load_utf8",
-    "pillow",
 ]
 
 MIDDLEWARE = [
